@@ -1,0 +1,99 @@
+@import url(./imports.css);
+
+:root {
+    --experience-icon-color: #90CAF9;
+    --quality-icon-color: #C5E1A5;
+    --friendly-icon-color: #FFE082;
+    --certified-icon-color: #B39DDB;
+    --secure-icon-color: #EF9A9A;
+
+    --experience-card-background: #E3F2FD;
+    --quality-card-background: #E8F5E9;
+    --friendly-card-background: #FFF8E1;
+    --certified-card-background: #EDE7F6;
+    --secure-card-background: #FFEBEE;
+}
+
+.info-cards {
+    display: flex;
+    gap: 50px;
+}
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+
+    width: 250px;
+
+    padding: 1rem;
+    border-radius: 5px;
+    border: 1px solid #f2f2f2;
+
+    font-family: "Poppins";
+    background-color: aliceblue;
+
+    cursor: pointer;
+}
+
+
+.info-icon {
+    padding: 1em;
+    border-radius: 100%;
+    background-color: white;
+    /* max-width: min-content; */
+    /* max-height: min-content; */
+    
+    z-index: 1;
+
+    box-shadow: 1px 1px 7px -4px rgba(0,0,0,0.75);
+}
+
+.info-icon> i {
+    width: 50px;
+    height: 50px;
+    
+    /* color: red; */
+}
+
+.info-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    
+}
+
+.info-description {
+    color: #5c5776;
+    font-size: 0.85em;
+}
+
+
+#experience-card {background-color: var(--experience-card-background);}
+#experience-card > .info-icon {color: var(--experience-icon-color);}
+
+#quality-card {background-color: var(--quality-card-background);}
+#quality-card > .info-icon {color: var(--quality-icon-color);}
+
+#friendly-card {background-color: var(--friendly-card-background);}
+#friendly-card > .info-icon {color: var(--friendly-icon-color);}
+
+#certified-card {background-color: var(--certified-card-background);}
+#certified-card > .info-icon {color: var(--certified-icon-color);}
+
+#secure-card {background-color: var(--secure-card-background);}
+#secure-card > .info-icon {color: var(--secure-icon-color);}
+
+.info-card > * {
+    transition-property: transform;
+    transition-duration: 500ms;
+}
+.info-card:hover > .info-icon {
+    transform: translateY(-70%);
+}
+.info-card:hover > .info-name {
+    transform: translateY(-100%);
+}
+.info-card:hover > .info-description {
+    transform: translateY(-70%);
+}
